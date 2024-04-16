@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.split{
+    width: 50%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;   
+    position: absolute;
+    transition: all 1s ease-in-out;
+}
+.left{
+    left: 0;
+    background-image: url(../img/batman-v-superman-movie-4k-zy.jpg);
+}
+.left::before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.right{
+    right: 0;
+    background-image: url(../img/thor-and-hulk-in-thor-rangnarok-iq.jpg);
+}
+.right::before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+h1{
+    color: white;
+    font-size: 3rem;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+a{
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: .3rem solid white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.left a:hover{
+    background-color: rgba(40,40,200,1);
+    border-color: rgba(40,40,200,1) ;
+}
+
+.right a:hover{
+    background-color: rgba(40,180,40,1);
+    border-color: rgba(40,180,40,1) ;
+}
+
+
+.left-active .split.left{
+    width: 70%;
+}
+.left-active .split.right{
+    width: 30%;
+}
+.right-active .split.left{
+    width: 30%;
+}
+.right-active .split.right{
+    width: 70%;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:800px){
+    h1{
+        font-size: 2rem;
+        top: 45%;
+    }
+    a{
+        font-size: 1.2rem;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        padding: .5rem 1rem;
+    }
+}
